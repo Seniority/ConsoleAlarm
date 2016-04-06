@@ -43,12 +43,15 @@ namespace ConsoleAlarm
             Console.Write("Set the time the alarm will sound (HH:MM): ");
             alarmTime = Console.ReadLine();
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Set the alarm's shutdown code (used to turn alarm off - case sensitive): ");
             shutdownCode = Console.ReadLine();
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Set the alarm's snooze time (in minutes): ");
             snoozeTime = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(">> Your alarm will sound at " + alarmTime);
             Console.WriteLine(">> Snooze time: " + snoozeTime + " minute(s)");
             Console.WriteLine(">> Your alarm shutdown code is: " + shutdownCode);
@@ -59,6 +62,7 @@ namespace ConsoleAlarm
 
             while (DateTime.Now.ToShortTimeString() != alarmTime)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(DateTime.Now.ToLongTimeString());
                 Thread.Sleep(1000);
             }
@@ -67,7 +71,9 @@ namespace ConsoleAlarm
 
             while (keepGoing)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("Type \"S\" to snooze or \"" + shutdownCode + "\" to turn alarm off: ");
+                Console.ForegroundColor = ConsoleColor.White;
                 userInput = Console.ReadLine();
 
                 if (userInput == shutdownCode)
@@ -92,6 +98,7 @@ namespace ConsoleAlarm
 
             while (future != DateTime.Now.ToLongTimeString())
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(DateTime.Now.ToLongTimeString());
                 Thread.Sleep(1000);
             }
