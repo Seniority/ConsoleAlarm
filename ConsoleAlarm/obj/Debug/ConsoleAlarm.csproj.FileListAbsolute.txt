@@ -1,0 +1,6 @@
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\bin\Debug\ConsoleAlarm.exe.config
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\bin\Debug\ConsoleAlarm.exe
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\bin\Debug\ConsoleAlarm.pdb
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\obj\Debug\ConsoleAlarm.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\obj\Debug\ConsoleAlarm.exe
+C:\Users\Anthony\Desktop\Programming\C# Projects\ConsoleAlarm\ConsoleAlarm\obj\Debug\ConsoleAlarm.pdb
