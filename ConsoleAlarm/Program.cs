@@ -19,7 +19,7 @@ namespace ConsoleAlarm
         static string shutdownCode;     // what the user will need to type to turn off the alarm sound
         static string userInput;        // what the user types to attempt to shut off the alarm sound
         static int snoozeTime;          // determines how many minutes the alarm will snooze for
-        static bool keepGoing = true;
+        static bool keepGoing = true;   // keeps the snooze loop activated
 
         static SoundPlayer alarmSound = new SoundPlayer();
 
@@ -69,7 +69,7 @@ namespace ConsoleAlarm
 
             alarmSound.PlayLooping();
 
-            while (keepGoing)
+            while (keepGoing) // THE SNOOZE LOOP
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("Type \"S\" to snooze or \"" + shutdownCode + "\" to turn alarm off: ");
@@ -80,6 +80,7 @@ namespace ConsoleAlarm
                 {
                     alarmSound.Stop();
                     keepGoing = false;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write("The alarm has been turned off. Press ENTER to exit application.");
                     Console.ReadLine();
                 }
